@@ -1,0 +1,236 @@
+html,
+body,
+#___gatsby,
+.container {
+  height: 100%;
+  padding: 0px;
+  margin: 0 auto;
+  max-width: 980px;
+  font-family: "Merriweather", serif;
+  background: #ffffff;
+  min-width: 500px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: Josefin Sans, sans-serif;
+}
+
+h1 {
+  font-size: 36px;
+}
+
+h2 {
+  font-size: 32px;
+}
+
+h3 {
+  font-size: 28px;
+}
+
+h4 {
+  font-size: 24px;
+}
+
+h5 {
+  font-size: 20px;
+}
+
+.container {
+  margin: 0;
+}
+.container {
+  display: grid;
+  /* grid-gap: 10px; */
+  height: 100%;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "nav"
+    "main"
+    "footer";
+  grid-template-rows: 110px auto 80px;
+}
+
+.nav {
+  /* padding-bottom: 100px; */
+  grid-area: nav;
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+}
+
+.nav h1 {
+  line-height: 1.2em;
+  text-align: center;
+}
+
+.nav #about {
+  line-height: 1.5em;
+  text-align: left;
+}
+
+.nav #projects {
+  line-height: 1.5em;
+  text-align: right;
+}
+
+.main {
+  grid-area: main;
+  display: grid;
+  grid-gap: 40px;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  grid-auto-rows: 400px;
+}
+
+.main div {
+  /* border: 1px solid black; */
+}
+
+.footer {
+  padding-top: 30px;
+  grid-area: footer;
+  text-align: center;
+}
+.nav {
+  /* max-width: 980px; */
+  /* margin: 0 auto; */
+  /* padding-bottom: 50px; */
+  /* background-color: #7e57c2; */
+}
+.main {
+  /* max-width: 980px;
+  margin: 0 auto; */
+  /* background-color: #f8bbd0; */
+}
+.footer {
+  /* background-color: #7e57c2; */
+}
+
+.main > div > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  overflow: hidden;
+}
+
+.postcard a {
+  color: white;
+  text-decoration: none;
+}
+
+@keyframes scalin {
+  0% {
+    transform: scale(0, 0);
+  }
+  100% {
+    transform: scale(1, 1);
+    opacity: 1;
+  }
+}
+
+@keyframes bounceIn {
+  0% {
+    opacity: 0;
+    transform: translate(0px, 500px) scale(0, 0);
+  }
+  50% {
+    opacity: 0.9;
+    transform: translate(0px, 0px) scale(1, 1);
+  }
+  /* 80%{
+    opacity: .95;
+    transform: translate(0px, 10px) scale(.9,.9);;
+  } */
+  100% {
+    opacity: 1;
+    transform: translate(0px, 0px) scale(1, 1);
+  }
+  /* 90%{
+    opacity: 1;
+    transform: translate(0px, 5px);
+  }
+  100%{
+    opacity: 1;
+    transform: translate(0px, 0px);
+  } */
+}
+
+.postcard {
+  overflow: hidden;
+  text-overflow: hidden;
+
+  animation-name: bounceIn;
+  /* animation-name: scalin; */
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+  transform: translate(0px, 0px);
+  opacity: 0;
+}
+
+.postcard .postcardheader {
+  position: absolute;
+  color: white;
+  z-index: 500;
+  background: rgba(0, 0, 0, 0.7);
+  width: 100%;
+  bottom: -75px;
+  transition: bottom 0.3s ease;
+  overflow: hidden;
+}
+
+.postcard:hover .postcardheader {
+  bottom: 0;
+  /* height: 150px; */
+}
+
+.postcard:hover .foldtl:before {
+  /* border-bottom: 100px solid rgba(50, 100, 200, 1); */
+  border-bottom: 100px solid rgba(255, 255, 255, 0.9);
+  border-left: 100px solid transparent;
+}
+
+.postcard:hover .foldtl:after {
+  border-top: 101px solid #ffffff;
+  border-right: 101px solid transparent;
+}
+
+.foldtl {
+  position: absolute;
+  -webkit-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.8);
+  -moz-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.8);
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.8);
+}
+
+.postcard .foldtl:before {
+  content: "";
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  width: 0px;
+  height: 0px;
+  /* border-bottom: 80px solid rgba(50, 100, 200, 1); */
+  /* border-bottom: 80px solid rgba(255,255,200,1); */
+  /* border-bottom: 80px solid rgba(255, 255, 255, 0.797); */
+  border-bottom: 80px solid rgba(255, 255, 255, 0.9);
+  border-left: 80px solid transparent;
+  -webkit-box-shadow: 7px 7px 7px rgba(0, 0, 0, 0.9);
+  -moz-box-shadow: 7px 7px 7px rgba(0, 0, 0, 0.9);
+  box-shadow: 7px 7px 7px rgba(0, 0, 0, 0.9);
+  transition: border-bottom 0.3s ease, border-left 0.3s ease;
+}
+
+.foldtl:after {
+  content: "";
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  width: 0px;
+  height: 0px;
+  border-top: 81px solid #ffffff;
+  border-right: 81px solid transparent;
+  transition: border-top 0.3s ease, border-right 0.3s ease;
+}
