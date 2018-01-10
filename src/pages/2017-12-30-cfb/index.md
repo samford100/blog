@@ -15,7 +15,7 @@ After watching an [incredible](!bakerscoringatouchdown.com), [thrilling](!georgi
 
 ### Power 5
 
-If the team is in a Power 5 conference (Big 10, SEC, ACC, Big 12, Pac-12) or claim religious exemption from conference play (Notre Dame), then they have the most resources to recruit the best, so they get the best recruits. Since they have the best players they are perenially the best teams in the country and this feeds back into recruiting better players. Conversely, public schools have incentives to give recruit in state, so they will likely have an exceptional number of in state kids.
+If the team is in a Power 5 conference (Big 10, SEC, ACC, Big 12, Pac-12) or claim religious exemption from conference play (Notre Dame), then they have the most resources to recruit the best, so they get the best recruits. Since they have the best players they are perennially the best teams in the country and this feeds back into recruiting better players. Conversely, public schools have incentives to give recruit in state, so they will likely have an exceptional number of in state kids.
 
 So what is going to convince the best players to go across the country to play football? Here are some of the factors I think are important for fielding a team from all across the country.
 

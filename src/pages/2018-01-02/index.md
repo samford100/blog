@@ -202,4 +202,4 @@ Which gives the results
 
 ### Future Plans for Pt. 2
 
-With the pipeline all setup, I just have to run this code every night after the day's game to start building up this dataset. The next steps are to analyze what sentiment is coorelated to a win. Thanks for reading and stay tuned for pt. 2!
+With the pipeline all setup, I just have to run this code every night after the day's game to start building up this dataset. The next steps are to analyze what sentiment is correlated to a win. Thanks for reading and stay tuned for pt. 2!
