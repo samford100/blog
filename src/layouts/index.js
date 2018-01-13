@@ -13,7 +13,19 @@ const Header = () => <div>asdf </div>;
 // scp -r ./public sam@138.197.87.105:/home/sam
 // sudo rsync -av /home/sam/public/ /var/www/html/
 
-const Footer = () => <div>sford100 at gatech dot edu</div>;
+const Footer = () => (
+  <div className="footer">
+    <a href="mailto:sford100@gatech.edu">
+      <i className="fas fa-2x fa-at" />
+    </a>
+    <a href="https://www.linkedin.com/in/sam-ford-100/" target="_blank">
+      <i className="fab fa-2x fa-linkedin-in" />
+    </a>
+    <a href="https://github.com/samford100/" target="_blank">
+      <i className="fab fa-2x fa-github" />
+    </a>
+  </div>
+);
 
 const TemplateWrapper = ({ children }) => (
   <div className="container">
@@ -23,7 +35,12 @@ const TemplateWrapper = ({ children }) => (
         { name: "description", content: "Sample" },
         { name: "keywords", content: "sample, something" }
       ]}
-    />
+    >
+      <script
+        defer
+        src="https://use.fontawesome.com/releases/v5.0.4/js/all.js"
+      />
+    </Helmet>
     <div className="nav">
       <h3 id="about" style={{ lineHeight: "1.5em" }}>
         <Link
@@ -65,7 +82,7 @@ const TemplateWrapper = ({ children }) => (
       </h3>
     </div>
     {children()}
-    <div className="footer">sford100 at gatech dot edu</div>
+    <Footer />
   </div>
 );
 
