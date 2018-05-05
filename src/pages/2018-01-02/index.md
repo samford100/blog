@@ -1,5 +1,5 @@
 ---
-path: '/nba-subreddit-sentiment'
+path: '/nba-subreddit-sentiment-pt1'
 title: 'Predicting Daily NBA Winners by Subreddit Sentiment Pt. 1'
 subtitle: ''
 published: true

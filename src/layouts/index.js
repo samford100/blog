@@ -15,74 +15,63 @@ const Header = () => <div>asdf </div>;
 
 const Footer = () => (
   <div className="footer">
-    <a href="mailto:sford100@gatech.edu">
-      <i className="fas fa-2x fa-at" />
-    </a>
-    <a href="https://www.linkedin.com/in/sam-ford-100/" target="_blank">
-      <i className="fab fa-2x fa-linkedin-in" />
-    </a>
-    <a href="https://github.com/samford100/" target="_blank">
-      <i className="fab fa-2x fa-github" />
-    </a>
+    <div>
+      <a href="mailto:sford100@gatech.edu">
+        <span>
+          <i className="fas fa-2x fa-at" />
+        </span>
+      </a>
+      <a href="https://www.linkedin.com/in/sam-ford-100/" target="_blank">
+        <span>
+          <i className="fab fa-2x fa-linkedin-in" />
+        </span>
+      </a>
+      <a href="https://github.com/samford100/" target="_blank">
+        <span>
+          <i className="fab fa-2x fa-github" />
+        </span>
+      </a>
+    </div>
   </div>
 );
 
 const TemplateWrapper = ({ children }) => (
-  <div className="container">
-    <Helmet
-      title="Sam Ford's Blog"
-      meta={[
-        { name: "description", content: "Sample" },
-        { name: "keywords", content: "sample, something" }
-      ]}
-    >
-      <script
-        defer
-        src="https://use.fontawesome.com/releases/v5.0.4/js/all.js"
-      />
-    </Helmet>
-    <div className="nav">
-      <h3 id="about" style={{ lineHeight: "1.5em" }}>
-        <Link
-          to="/about"
-          style={{
-            color: "black",
-            textDecoration: "none",
-            borderBottom: "3px solid black"
-          }}
-        >
-          about
-        </Link>
-      </h3>
+  <div>
+    <div className="container">
+      <Helmet
+        title="Sam Ford's Blog"
+        meta={[
+          { name: "description", content: "Sample" },
+          { name: "keywords", content: "sample, something" }
+        ]}
+      >
+        <script
+          defer
+          src="https://use.fontawesome.com/releases/v5.0.4/js/all.js"
+        />
+      </Helmet>
+      <div className="nav">
+        <h3 id="about" style={{ lineHeight: "1.5em" }}>
+          <Link to="/about">
+            <span>about</span>
+          </Link>
+        </h3>
 
-      <h1>
-        <Link
-          to="/"
-          style={{
-            color: "black",
-            textDecoration: "none",
-            borderBottom: "3px solid black"
-          }}
-        >
-          // sam-ford \\
-        </Link>
-      </h1>
+        <h1>
+          <Link to="/">
+            <span>// sam-ford \\</span>
+          </Link>
+        </h1>
 
-      <h3 id="projects">
-        <Link
-          to="/projects"
-          style={{
-            color: "black",
-            textDecoration: "none",
-            borderBottom: "3px solid black"
-          }}
-        >
-          projects
-        </Link>
-      </h3>
+        <h3 id="projects">
+          <Link to="/projects">
+            <span>projects</span>
+          </Link>
+        </h3>
+      </div>
+      {children()}
+      <Footer />
     </div>
-    {children()}
-    <Footer />
   </div>
 );
 

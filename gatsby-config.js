@@ -58,6 +58,7 @@ module.exports = {
     `gatsby-transformer-pdf`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
-    `gatsby-transformer-csv`
+    `gatsby-transformer-csv`,
+    `gatsby-plugin-sass`
   ]
 };
